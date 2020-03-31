@@ -1,13 +1,17 @@
-import * as all from "cypress-cucumber-preprocessor/steps";
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import HomePage from "../pages/homePage";
 
-// Elements
-const tbSearch = "input[name='q']";
-const btnSearch = "input[name='btnK']";
+const homePage = new HomePage();
 
-all.When("I search for {string}", searchTerm => {
-  cy.get(tbSearch).type(searchTerm).type('{enter}');
+Given("I visit the Google Home Page", () => {
+  homePage.visit("https://www.google.com/");
+  homePage.getUrl().should("include", "www.google.com");
 });
 
-all.Then("I should see the results for {string}", searchTerm => {
-  cy.contains(searchTerm);
+When("I search for {string}", searchTerm => {
+  homePage.searchFor(searchTerm);
+});
+
+Then("I should see the results for {string}", searchTerm => {
+  homePage.checkForSearch(searchTerm);
 });
