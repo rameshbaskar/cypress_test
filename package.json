@@ -1,0 +1,25 @@
+{
+  "name": "cypress_test",
+  "version": "1.0.0",
+  "description": "Sample automation framework with Cypress",
+  "main": "index.js",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "1.12.0",
+    "underscore": "1.9.1",
+    "uuidv4": "4.0.0"
+  },
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cypress:run-with-tags": "./node_modules/.bin/cypress-tags run -e"
+  },
+  "author": "Ramesh Baskarasubramanian",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.2.0",
+    "cypress-plugin-retries": "1.5.2"
+  }
+}

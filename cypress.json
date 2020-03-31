@@ -1,0 +1,8 @@
+{
+    "ignoreTestFiles": "*.js",
+    "chromeWebSecurity": false,
+    "modifyObstructiveCode": true,
+    "viewportWidth": 1200,
+    "viewportHeight": 1300
+}
+  
