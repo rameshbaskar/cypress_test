@@ -7,14 +7,12 @@
     "nonGlobalStepDefinitions": true
   },
   "dependencies": {
-    "cypress-cucumber-preprocessor": "1.12.0",
     "underscore": "1.9.1",
     "uuidv4": "4.0.0"
   },
   "scripts": {
     "cypress:open": "./node_modules/.bin/cypress open",
-    "cypress:run": "./node_modules/.bin/cypress run",
-    "cypress:run-with-tags": "./node_modules/.bin/cypress-tags run -e"
+    "cypress:run": "./node_modules/.bin/cypress run"
   },
   "author": "Ramesh Baskarasubramanian",
   "license": "ISC",

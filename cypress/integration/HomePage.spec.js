@@ -1,11 +1,12 @@
 import HomePage from './pages/homePage';
 
-context('user', () => {
-  homePage = new HomePage();
+const homePage = new HomePage();
+
+describe('user', () => {
 
   it('should be able to visit the home page', () => {
     homePage.visit('https://www.google.com/');
-    homePage.getUrl().contains('www.google.com');
+    homePage.getUrl().should('include', 'www.google.com');
   });
 
   it('should be able to search for a term', () => {

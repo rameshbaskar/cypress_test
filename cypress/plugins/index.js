@@ -1,12 +1,8 @@
-const cucumber = require("cypress-cucumber-preprocessor").default;
-
-module.exports = on => {
-  on("file:preprocessor", cucumber());
-
+module.exports = (on, config) => {
   on("task", {
     log(message) {
       console.log(message);
       return null;
     }
-  });
-};
+  })
+}
