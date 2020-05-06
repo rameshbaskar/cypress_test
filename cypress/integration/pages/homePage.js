@@ -1,24 +1,14 @@
-class HomePage {
-  tbSearch = "input[name='q']";
-  url = "https://www.google.com/"
-  
-  visit(url) {
-    cy.visit(url);
+const Page = require('./page');
+
+class HomePage extends Page {
+  constructor() {
+    super();
+    this.tbSearch = 'input[name="q"]';
   }
 
-  getUrl() {
-    return cy.url();
-  }
-  
-  searchFor(text) {
-    cy.get(this.tbSearch)
-      .type(text)
-      .type("{enter}");
-  }
-
-  checkForSearch(text) {
-    cy.contains(text);
+  search(text) {
+    cy.get(this.tbSearch).type(text).type('{enter}');
   }
 }
 
-export default HomePage;
+module.exports = HomePage;

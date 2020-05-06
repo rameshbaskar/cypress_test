@@ -18,6 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^4.2.0",
-    "cypress-plugin-retries": "1.5.2"
+    "cypress-plugin-retries": "1.5.2",
+    "assert": "^2.0.0",
+    "chai": "^4.1.2"
   }
 }
