@@ -1,8 +1,5 @@
-const Page = require('./page');
-
-class HomePage extends Page {
+export default class HomePage {
   constructor() {
-    super();
     this.tbSearch = 'input[name="q"]';
   }
 
@@ -10,5 +7,3 @@ class HomePage extends Page {
     cy.get(this.tbSearch).type(text).type('{enter}');
   }
 }
-
-module.exports = HomePage;
