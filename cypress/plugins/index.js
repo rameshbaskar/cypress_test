@@ -4,5 +4,5 @@ module.exports = (on, config) => {
       console.log(message);
       return null;
     }
-  })
+  });
 }
