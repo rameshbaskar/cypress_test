@@ -10,15 +10,25 @@ export function pageShouldHaveContent(text) {
 
 export function pageShouldHaveElement(locator) {
   cy.log(`Checking if page contains element identified by: ${locator}`);
-  cy.get(locator).should('not.be.undefined');
+  findElement(locator).should('not.be.undefined');
 }
 
 export function fillText(locator, text) {
   cy.log(`Filling text: ${text} into element identified by: ${locator}`);
-  cy.get(locator).type(text);
+  findElement(locator).type(text);
 }
 
 export function fillAndSubmit(locator, text) {
   cy.log(`Filling text: ${text} into element identified by: ${locator} and then submitting`);
-  cy.get(locator).type(text).type('{enter}');
+  findElement(locator).type(text).type('{enter}');
+}
+
+export function click(locator) {
+  cy.log(`Clicking on element identified by: ${locator}`);
+  findElement(locator).click();
+}
+
+export function findElement(locator) {
+  cy.log(`Fetching element in the page using locator: ${locator}`);
+  return cy.get(locator);
 }
