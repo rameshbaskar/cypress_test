@@ -1,4 +1,4 @@
-import { fillAndSubmit } from '../utils/commonFunctions';
+import { fillTextAndSubmit } from '../utils/page';
 
 export default class HomePage {
   constructor() {
@@ -6,6 +6,6 @@ export default class HomePage {
   }
 
   search(text) {
-    fillAndSubmit(this.tbSearch, text);
+    fillTextAndSubmit(this.tbSearch, text);
   }
 }

@@ -3,12 +3,12 @@ export function visitUrl(url) {
   cy.visit(url);
 }
 
-export function pageShouldHaveContent(text) {
+export function shouldHaveContent(text) {
   cy.log(`Checking if page contains text: ${text}`);
   cy.contains(text).should('not.be.undefined');
 }
 
-export function pageShouldHaveElement(locator) {
+export function shouldHaveElement(locator) {
   cy.log(`Checking if page contains element identified by: ${locator}`);
   findElement(locator).should('not.be.undefined');
 }
@@ -18,7 +18,7 @@ export function fillText(locator, text) {
   findElement(locator).type(text);
 }
 
-export function fillAndSubmit(locator, text) {
+export function fillTextAndSubmit(locator, text) {
   cy.log(`Filling text: ${text} into element identified by: ${locator} and then submitting`);
   findElement(locator).type(text).type('{enter}');
 }

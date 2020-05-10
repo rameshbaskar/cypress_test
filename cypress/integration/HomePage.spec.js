@@ -1,5 +1,5 @@
 import HomePage from './pages/homePage';
-import { visitUrl, pageShouldHaveContent } from './utils/commonFunctions';
+import { visitUrl, shouldHaveContent } from './utils/page';
 
 const homePage = new HomePage();
 
@@ -15,6 +15,6 @@ describe('user', () => {
 
   it('should be able to search for a term', () => {
     homePage.search('Cypress');
-    pageShouldHaveContent('www.cypress.io');
+    shouldHaveContent('www.cypress.io');
   });
 })
