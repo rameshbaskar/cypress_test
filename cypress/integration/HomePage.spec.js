@@ -1,11 +1,10 @@
 import HomePage from './pages/homePage';
-import { visitUrl, shouldHaveContent } from './utils/page';
 
 const homePage = new HomePage();
 
 describe('user', () => {
   beforeEach(() => {
-    visitUrl('https://www.google.com/');
+    cy.visit('https://www.google.com/');
   });
 
   // This test intentionaly fails to demonstrate the reporting
@@ -15,6 +14,6 @@ describe('user', () => {
 
   it('should be able to search for a term', () => {
     homePage.search('Cypress');
-    shouldHaveContent('www.cypress.io');
+    homePage.shouldHaveContent('www.cypress.io');
   });
 })
