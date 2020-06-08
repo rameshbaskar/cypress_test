@@ -32,3 +32,8 @@ export function findElement(locator) {
   cy.log(`Fetching element in the page using locator: ${locator}`);
   return cy.get(locator);
 }
+
+export function uploadImage(locator, fileName) {
+  cy.log('Attaching a file');
+  cy.get(locator).attachFile(fileName); // File has to be present in the cypress/fixtures folder
+}
