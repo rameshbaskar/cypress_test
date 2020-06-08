@@ -30,7 +30,8 @@ export function click(locator) {
 
 export function findElement(locator) {
   cy.log(`Fetching element in the page using locator: ${locator}`);
-  return cy.get(locator);
+  var el = locator.startsWith('//') ? cy.xpath(locator) : cy.get(locator);
+  return el;
 }
 
 export function uploadImage(locator, fileName) {
