@@ -1,5 +1,6 @@
 {
-    "ignoreTestFiles": "**/pages/*.js",
+    "baseUrl": "https://www.google.com",
+    "testFiles": "**/*.spec.js",
     "chromeWebSecurity": false,
     "modifyObstructiveCode": true,
     "viewportWidth": 1200,
