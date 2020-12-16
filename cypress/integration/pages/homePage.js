@@ -1,15 +1,11 @@
-import Page from './page';
+// Elements
+const tbSearch = "input[name='q']";
 
-export default class HomePage extends Page {
-  constructor() {
-    super();
+// Functions
+export function search(text) {
+  cy.get(tbSearch).clear().type(text).type("Enter");
+}
 
-    // Elements
-    this.tbSearch = 'input[name="q"]';
-  }
-
-  search(text) {
-    this.log(`Search for text: ${text}`);
-    this.typeIntoAndSubmit(this.tbSearch, text);
-  }
+export function verifySearch(text) {
+  cy.contains(text).should('not.be.undefined');
 }

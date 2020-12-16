@@ -1,19 +1,17 @@
-import HomePage from './pages/homePage';
+import * as homePage from "./pages/homePage";
 
-const homePage = new HomePage();
-
-describe('user', () => {
+describe("user", () => {
   beforeEach(() => {
-    cy.visit('https://www.google.com/');
+    cy.visit("https://www.google.com");
   });
 
   // This test intentionaly fails to demonstrate the reporting
-  it('should be able to visit the home page', () => {
-    cy.url().should('contain', 'goggle.com');
+  it("should be able to visit the home page", () => {
+    cy.url().should("contain", "google.com");
   });
 
-  it('should be able to search for a term', () => {
-    homePage.search('Cypress');
-    homePage.shouldHaveContent('www.cypress.io');
+  it("should be able to search for a term", () => {
+    homePage.search("Cypress");
+    homePage.verifySearch("www.cypress.io");
   });
 })
