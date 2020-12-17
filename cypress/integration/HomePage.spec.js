@@ -7,7 +7,7 @@ describe("user", () => {
 
   // This test intentionaly fails to demonstrate the reporting
   it("should be able to visit the home page", () => {
-    cy.url().should("contain", "test.com");
+    cy.url().should("contain", "gogle.com");
   });
 
   it("should be able to search for a term", () => {
