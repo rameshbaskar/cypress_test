@@ -1,51 +1,43 @@
-export default class Page {
-  constructor() {}
+export function clickOn(locator) {
+  cy.get(locator).click();
+}
 
-  log(message) {
-    cy.log(message);
-  }
+export function typeInto(locator, text) {
+  cy.get(locator).clear().type(text);
+}
 
-  clickOn(locator) {
-    cy.get(locator).click();
-  }
+export function typeIntoAndSubmit(locator, text) {
+  cy.get(locator).clear().type(text).type("{enter}");
+}
 
-  typeInto(locator, text) {
-    cy.get(locator).clear().type(text);
-  }
+export function selectFrom(locator, text) {
+  cy.get(locator).select(text);
+}
 
-  typeIntoAndSubmit(locator, text) {
-    cy.get(locator).clear().type(text).type('{enter}');
-  }
+export function uploadFile(locator, fileName) {
+  cy.get(locator).attachFile(fileName); // fileName should be present in cypress/fixtures folder
+}
 
-  selectFrom(locator, text) {
-    cy.get(locator).select(text);
-  }
+export function shouldBeVisible(locator) {
+  cy.get(locator).should("be.visible");
+}
 
-  uploadFile(locator, fileName) {
-    cy.get(locator).attachFile(fileName); // fileName should be present in cypress/fixtures folder
-  }
+export function shouldHaveExactText(locator, text) {
+  cy.get(locator).should("have.text", text);
+}
 
-  shouldBeVisible(locator) {
-    cy.get(locator).should('be.visible');
-  }
+export function shouldContainText(locator, text) {
+  cy.get(locator).should("contain.text", text);
+}
 
-  shouldHaveExactText(locator, text) {
-    cy.get(locator).should('have.text', text);
-  }
+export function shouldHaveAttribute(locator, attrName, attrValue) {
+  cy.get(locator).should("have.attr", attrName, attrValue);
+}
 
-  shouldContainText(locator, text) {
-    cy.get(locator).should('contain.text', text);
-  }
+export function shouldHaveValue(locator, text) {
+  cy.get(locator).should("have.value", text);
+}
 
-  shouldHaveAttribute(locator, attrName, attrValue) {
-    cy.get(locator).should('have.attr', attrName, attrValue);
-  }
-
-  shouldHaveValue(locator, text) {
-    cy.get(locator).should('have.value', text);
-  }
-
-  shouldHaveContent(text) {
-    cy.contains(text).should('not.be.undefined');
-  }
+export function shouldHaveContent(text) {
+  cy.contains(text).should("not.be.undefined");
 }

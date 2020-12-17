@@ -1,11 +1,13 @@
+import * as page from "./page";
+
 // Elements
 const tbSearch = "input[name='q']";
 
 // Functions
 export function search(text) {
-  cy.get(tbSearch).clear().type(text).type("Enter");
+  page.typeIntoAndSubmit(tbSearch, text);
 }
 
 export function verifySearch(text) {
-  cy.contains(text).should('not.be.undefined');
+  page.shouldHaveContent(text);
 }
