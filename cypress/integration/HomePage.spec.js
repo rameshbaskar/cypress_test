@@ -7,6 +7,7 @@ describe("user", () => {
 
   // This test intentionaly fails to demonstrate the reporting
   it("should be able to visit the home page", () => {
+    cy.log("This test intentionaly fails to demonstrate the reporting and attaching of screenshots!");
     cy.url().should("contain", "gogle.com");
   });
 
