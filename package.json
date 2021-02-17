@@ -17,7 +17,7 @@
   "author": "Ramesh Baskarasubramanian",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "6.0.0",
+    "cypress": "6.5.0",
     "cypress-file-upload": "^4.0.6",
     "mocha": "^7.1.2",
     "mochawesome": "^6.1.1",
