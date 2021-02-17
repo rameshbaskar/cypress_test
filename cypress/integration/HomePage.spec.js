@@ -1,7 +1,7 @@
 import * as homePage from "./pages/homePage";
 
 describe("user", () => {
-  beforeEach(() => {
+  beforeEach(function() {
     cy.visit("https://www.google.com");
   });
 

@@ -4,10 +4,10 @@ import * as page from "./page";
 const tbSearch = "input[name='q']";
 
 // Functions
-export function search(text) {
+export const search = (text) => {
   page.typeIntoAndSubmit(tbSearch, text);
-}
+};
 
-export function verifySearch(text) {
+export const verifySearch = (text) => {
   page.shouldHaveContent(text);
-}
+};

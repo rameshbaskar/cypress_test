@@ -30,14 +30,14 @@ export function shouldContainText(locator, text) {
   cy.get(locator).should("contain.text", text);
 }
 
-export function shouldHaveAttribute(locator, attrName, attrValue) {
+export const shouldHaveAttribute = (locator, attrName, attrValue) => {
   cy.get(locator).should("have.attr", attrName, attrValue);
-}
+};
 
-export function shouldHaveValue(locator, text) {
+export const shouldHaveValue = (locator, text) => {
   cy.get(locator).should("have.value", text);
-}
+};
 
-export function shouldHaveContent(text) {
+export const shouldHaveContent = (text) => {
   cy.contains(text).should("not.be.undefined");
 }
