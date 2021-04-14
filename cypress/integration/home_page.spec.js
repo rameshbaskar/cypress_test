@@ -2,7 +2,7 @@ import * as HomePage from '../lib/pages/homePage';
 import * as Page from '../lib/pages/page';
 
 describe('user', () => {
-  beforeEach(function () {
+  before(function () {
     Page.visit('https://www.google.com');
   });
 
@@ -14,6 +14,6 @@ describe('user', () => {
 
   it('should be able to search for a term', function () {
     HomePage.search('Cypress');
-    HomePage.verifySearch('www.cypress.io');
+    Page.verifyPageHasText('www.cypress.io');
   });
 });
