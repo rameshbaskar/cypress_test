@@ -1,0 +1,18 @@
+{
+  "newInfo": {
+    "preferredName": "Cypress Test User",
+    "email": "test_user@cypress.com",
+    "country": "Singapore",
+    "areaCode": null,
+    "phone": "98765432",
+    "unEmployed": false
+  },
+  "updatedInfo": {
+    "preferredName": "Updated Cypress Test User",
+    "email": "updated_test_user@cypress.com",
+    "country": "Malaysia",
+    "areaCode": "302",
+    "phone": "98765432",
+    "unEmployed": true
+  }
+}

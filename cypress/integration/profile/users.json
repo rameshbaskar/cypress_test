@@ -1,0 +1,55 @@
+{
+  "defaultUser": {
+    "accountInfo": {
+      "preferredName": "Cypress Test User",
+      "email": "test_user@cypress.com",
+      "country": "Singapore",
+      "phone": "98765432",
+      "unEmployed": false
+    },
+    "qualifications": [
+      {
+        "grade": "Bachelor's degree or equivalent",
+        "area": "Mechanical Engineering",
+        "school": "National University of Singapore",
+        "yearAttained": "2005",
+        "description": null
+      }
+    ],
+    "workExperiences": [
+      {
+        "company": "GoJek Pte. Ltd.",
+        "position": "SDE 1",
+        "jobType": "Full Time",
+        "fromYear": "2005-10-01",
+        "toYear": "2010-10-01",
+        "isCurrentJob": false
+      },
+      {
+        "company": "Google Singapore Pte. Ltd.",
+        "position": "SDE 2",
+        "jobType": "Full Time",
+        "fromYear": "2010-10-01",
+        "toYear": null,
+        "isCurrentJob": true
+      }
+    ],
+    "documents": [
+      {
+        "fileName": "Formatted Resume.pdf",
+        "fileSize": 765432,
+        "filePath": "resume-mcf/576253jgjhgsd76723623hfahfsas.pdf",
+        "parseStatus": "parsed",
+        "parsedPath": "parsed-resumes/576253jgjhgsd76723623hfahfsas576253jgjhgsd76723623hfahfsas.json"
+      }
+    ],
+    "skills": [
+      ".Net",
+      "JavaScript",
+      "Core Java",
+      "Ruby on Rails",
+      "AWS",
+      "MySql"
+    ]
+  }
+}
